@@ -1,6 +1,7 @@
-# Homework #7
-1. Helm Chart в директории hw7helm
-  Run: $ cd hw7helm/; helm install hw7release ./
+# Домашняя работа для занятия #7
 
-3. Postman collection
-  Run: newman run HW7.postman_collection.json --verbose
+- Helm Chart в директории hw7helm. Включает в себя deployment для постгрес и веб-сервиса. Автоматически отработает JOB, который накатит DDL.
+  > Команда запуска: $ cd hw7helm/; helm install hw7release ./
+
+- **Postman collection**
+  > Команда запуска: newman run HW7.postman_collection.json --verbose
