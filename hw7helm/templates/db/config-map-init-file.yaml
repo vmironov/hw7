@@ -1,0 +1,21 @@
+apiVersion: v1
+# Kind for kubernets ConfigMap
+kind: ConfigMap
+metadata:
+  # Name your ConfigMap
+  name: init-file
+  namespace: {{ .Values.namespace }}  
+  labels:
+    app: postgresdb
+data:
+  init-file.sql: |
+    CREATE TABLE users                                                      (                   
+      id serial NOT NULL primary key,
+      username varchar(256) NOT NULL,
+      firstname varchar(2000) NOT NULL,
+      lastname varchar(2000) NOT NULL,
+      email varchar(2000) NOT NULL,
+      phone varchar(2000) NOT NULL
+     );
+
+
